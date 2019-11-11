@@ -3,27 +3,36 @@
 <head>
 <title>My Recipes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+<link type="text/css" rel="stylesheet" href="../css/recipe.css" th:href="@{../css/recipe.css}" />
 </head>
 <body>
 
 	<h1>My Recipes</h1>
+	<input type="hidden" th:field=${recipe.id}/>
+	
+	<h3 class="name" th:text="${recipe.foodTitle}"></h3>
 
 	<table class="table table-striped">
+		
 		<tr>
-			<th th:text="${category.categoryName}">category name</th>
-			<th class="fTitle" th:text="${recipe.foodTitle}">Food title</th>
-			<td th:text="${recipe.time}"></td>	
-			<td th:text="${recipe.ingredients}"></td>	
-			<td th:text="${recipe.guide}"></td>	
-			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/deleterecipe/{id}(id=${recipe.id})}" class="btn btn-danger">Delete</a></td>
-			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/editrecipe/{id}(id=${recipe.id})}">Edit</a></td>
+			<td class="data1" th:text="${recipe.time}"></td>
+		</tr>
+		<tr>	
+			<td class="data2" th:text="${recipe.ingredients}"></td>	
+		</tr>
+		<tr>
+			<td class="data3" th:text="${recipe.guide}"></td>	
+		</tr>
+		
+		<tr>
+			<th><a href="/recipes" class="link">Go to recipes</a></th>
+			
+			<th sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/deleterecipe/{id}(id=${recipe.id})}" class="delete">Delete</a></th>
+			<th sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/editrecipe/{id}(id=${recipe.id})}" class="edit">Edit</a></th>
 		</tr>
 	</table>
 	
-	
-	
-	
+
 
 </body>
 </html>

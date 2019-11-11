@@ -3,18 +3,18 @@
 <head>
 <title>My Recipes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+<link type="text/css" rel="stylesheet" href="../css/recipeform.css" th:href="@{../css/recipeform.css}" />
 </head>
 <body>
 
-	<h1>My Recipes</h1>
+	<h1>My Recipes edit-recipe</h1>
 	
-	<form action="#" th:action="@{/newrecipe}" th:object=${recipe} method="post">
+	<form class="newform" action="#" th:action="@{/newrecipe}" th:object=${recipe} method="post">
 		<input type="hidden" th:field=${recipe.id}/>
-		<h6>Recipe name: <input type="text" th:field=${recipe.foodTitle} /> </h6>
-		<h6>Cooking time: <input type="text" th:field=${recipe.time} /></h6>
-		<h6>Ingredients: <input type="text" th:field=${recipe.ingredients} /></h6>
-		<h6>Guide: <input type="text" th:field=${recipe.guide} /></h6>
+		<h6>Recipe name: <input class="s2-input" type="text" th:field=${recipe.foodTitle} /> </h6>
+		<h6>Cooking time: <input class="s-input" type="text" th:field=${recipe.time} /></h6>
+		<h6>Ingredients: <input class="l-input" type="text" th:field=${recipe.ingredients} /></h6>
+		<h6>Guide: <input class="l2-input" type="text" th:field=${recipe.guide} /></h6>
 		<h6>Category: </h6>
 			<select id="categoryId" th:field="*{category}" class="form-control">
 				<option th:each="category: ${categories}" th:value="${category.categoryId}" th:text="${category.categoryName}" ></option>

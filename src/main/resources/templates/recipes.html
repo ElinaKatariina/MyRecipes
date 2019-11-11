@@ -3,49 +3,48 @@
 <head>
 <title>My Recipes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+<link type="text/css" rel="stylesheet" href="css/recipes.css" th:href="@{css/recipes.css}" />
 </head>
 <body>
-
-	<div class="col-md-4">
-		<h1>Elinas Recipes</h1>
-	</div>
-	<div class="col-md-4">
-		<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
-	</div>
-	
-	<div class="col-md-4" style="padding:20px 0">
+	<div>
 		<form th:action="@{/logout}" method="post">
-			<input type="submit" value="Sign out" class="btn btn-danger"/>
+			<input type="submit" value="Sign out" class="signout"/>
+					<p th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</p>
 		</form>
 	</div>
-
+	<div>
+		<h1>My best recipes!</h1>
+	</div>
 	
 	<table class="table table-striped">
 	
 		<tr>
+			<th><a href="/home" class="link">Home page</a></th>	
+			<th sec:authorize="hasAuthority('ADMIN')"><a href="/newrecipe" class="link">Add New Recipe</a></th>
+			<th></th>
+			<th></th>
+		</tr>
+	
+		<tr class="headers">
 				<th>Food title</th>
-				<th>	</th>
+				
 				<th>Category</th>
 				<th sec:authorize="hasRole('ADMIN')"> </th>
 				<th sec:authorize="hasRole('ADMIN')"> </th>
-				<th> </th>
+				
 			</tr>
 		
-		<tr th:each="recipe : ${recipes}">
-			<td th:text="${recipe.foodTitle}"><a th:href="@{/recipe/{id}(id=${recipe.id})}"></a></td>	
-			<td>	</td>
-			<td th:text="${recipe.category.categoryName}">category</td>
-			<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/editrecipe/{id}(id=${recipe.id})}">Edit</a></td>
+		<tr class="data" th:each="recipe : ${recipes}">
+			<td class="data1" th:text="${recipe.foodTitle}"></td>	
+			<td class="data2" th:text="${recipe.category.categoryName}">category</td>
+			<td sec:authorize="hasAuthority('ADMIN')"><a class="delete" th:href="@{/deleterecipe/{id}(id=${recipe.id})}">Delete</a></td>
+			<td sec:authorize="hasAuthority('ADMIN')"><a  class="edit" th:href="@{/editrecipe/{id}(id=${recipe.id})}">Edit</a></td>
+			<td><a class="see-btn" th:href="@{/recipe/{id}(id=${recipe.id})}">See recipe!</a></td>
+			
 		</tr>
-		
-		<tr>	
-			<td sec:authorize="hasAuthority('ADMIN')"><a href="/newrecipe" class="btn btn-success">Add New Recipe</a></td>
-		</tr>
+			
 	
 	</table>
-
-	
 	
 	
 	

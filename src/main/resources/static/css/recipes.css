@@ -1,0 +1,143 @@
+
+.btn {
+	font-family: garamond;
+	font-size: 18px;
+	text-decoration: white;
+	color: black;
+	border: 3px solid gray;
+	border-radius: 15px;
+	background-color: white;
+	padding: 10px 20px;
+}
+.link {
+	font-family: garamond;
+	font-size: 18px;
+	text-decoration: white;
+	color: black;
+	border: 3px solid white;
+	border-radius: 10px;
+	background-color: white;
+	padding: 5px 17px;
+	opacity: 90%;
+}
+.link:hover {
+	color: white;
+	background-color: #b3ffb3;
+}
+.signout {
+	font-family: garamond;
+	font-size: 18px;
+	text-decoration: white;
+	color: black;
+	border: 3px solid white;
+	border-radius: 15px;
+	background-color: white;
+	padding: 10px 20px;
+	opacity: 75%;
+}
+.signout:hover {
+	color: white;
+	background-color: #ff4d4d;
+}
+table {
+	margin-left: ;
+	column-width: 600px;	
+}
+.hometable {
+	margin-left: 550px;
+}
+.headers {
+	height: 80px;
+	font-family: garamond;
+	font-size: 40px;
+}
+td {
+	height: 50px;
+	font-family: garamond;
+	font-size: 20px;
+}
+.data1 {
+	margin-left: 30px;
+	width: 600px;
+	font-family: garamond;
+	font-size: 30px;
+	text-align: center;
+}
+.data2 {
+	margin-left: 30px;
+	width: 400px;
+	font-family: garamond;
+	font-size: 30px;
+	text-align: center;
+}
+.cate {
+	margin-left: 300px;
+	font-family: garamond;
+	font-size: 35px;
+	text-align: center;
+	height: 80px;
+}
+.delete {
+	font-family: garamond;
+	font-size: 24px;
+	font-style: oblique;
+	text-decoration: white;
+	color: black;
+	border: 3px solid white;
+	border-radius: 10px;
+	background-color: white;
+	padding: 5px 10px;
+	opacity: 75%;
+}
+.delete:hover {
+	color: white;
+	background-color: #ff4d4d;
+}
+.edit {
+	font-family: garamond;
+	font-size: 24px;
+	font-style: oblique;
+	text-decoration: white;
+	color: black;
+	border: 3px solid white;
+	border-radius: 10px;
+	background-color: white;
+	padding: 5px 10px;
+	opacity: 75%;
+}
+.edit:hover {
+	color: white;
+	background-color: #ffb366;
+}
+.see-btn {
+	font-family: garamond;
+	font-size: 24px;
+	font-style: oblique;
+	text-decoration: white;
+	color: black;
+	border: 3px solid white;
+	border-radius: 10px;
+	background-color: white;
+	padding: 5px 10px;
+	opacity: 75%;
+}
+.see-btn:hover {
+	color: white;
+	background-color: #b3ffb3;
+}
+p {
+	font-family: garamond;
+	font-size: 20px;
+	
+}
+h1 {
+	font-family: Snell Roundhand;
+	font-size: 100px;
+	text-align: center;
+}
+body {
+	background-image: url("https://i.pinimg.com/originals/da/1e/0c/da1e0cf802e2971d11af610c6cf9f080.jpg");
+	background-position: center;
+	background-repeat: no-repeat, repeat;
+  	background-color: #ffffff;
+}

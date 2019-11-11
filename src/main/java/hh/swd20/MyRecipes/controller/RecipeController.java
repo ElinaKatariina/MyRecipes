@@ -88,7 +88,7 @@ public class RecipeController {
 	public String saveRecipe(@ModelAttribute Recipe recipe) {
 		//saving one recipe data into the repository
 		RecRepo.save(recipe);
-		return "redirect:/home";
+		return "redirect:/recipes";
 	}
 	
 	//EDIT recipe
@@ -103,15 +103,15 @@ public class RecipeController {
 	@RequestMapping(value = "/deleterecipe/{id}", method = RequestMethod.GET)
 	public String deleteRecipe(@PathVariable("id") Long id) {
 		RecRepo.deleteById(id);
-		return "redirect:../home";
+		return "redirect:../recipes";
 	}
 	
 	//SHOW one recipe
 	@RequestMapping(value = "/recipe/{id}", method = RequestMethod.GET)
 	public String showRecipe(@PathVariable("id") Long id, Model model) {
-		model.addAttribute("recipe", RecRepo.findById(id));
+		model.addAttribute("recipe", RecRepo.findById(id).get());
 		model.addAttribute("categories", CatRepo.findAll());
-		return "";
+		return "recipe";
 	}
 	
 

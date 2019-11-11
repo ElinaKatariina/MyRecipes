@@ -3,20 +3,28 @@
 <head>
 <title>My Recipes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+<link type="text/css" rel="stylesheet" href="css/recipes.css" th:href="@{css/recipes.css}" />
 </head>
 <body>
 
+	<div>
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign out" class="signout"/>
+					<p th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</p>
+		</form>
+	</div>
+
+	<a href="/recipes" class="link">Go to recipes</a>
+
 	<h1>My Recipes</h1>
 	
-	<table class="table table-striped">
+	<table class="hometable">
 		
 		<tr th:each="category : ${categories}">
-			<th th:text="${category.categoryName}"></th>	
+			<th class="cate" th:text="${category.categoryName}"></th>
 		</tr>
 	
 	</table>
-	
 
 </body>
 </html>
