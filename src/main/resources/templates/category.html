@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<title>My Recipes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+
+	<h1>My Recipes</h1>
+	
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<a href="/recipehome">Home</a>
+			<a href="/category/{id}">Pasta</a>
+			<a href="">Soup</a>
+			<a href="">Chicken</a>
+			<a href="">Meat</a>
+			<a href="">Sides</a>
+			<a href="">Dessert</a>
+		</div>
+	</nav>
+	
+	<table class="table table-striped">
+		<tr>
+			<th th:text="${category.categoryName}">category name</th>
+			<th class="fTitle" th:text="${recipe.foodTitle}">Food title</th>
+		</tr>
+	</table>
+	
+	
+	
+	
+
+</body>
+</html>

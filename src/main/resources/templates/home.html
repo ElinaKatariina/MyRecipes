@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+<title>My Recipes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+
+	<h1>My Recipes</h1>
+	
+	<table class="table table-striped">
+		
+		<tr th:each="category : ${categories}">
+			<th th:text="${category.categoryName}"></th>	
+		</tr>
+	
+	</table>
+	
+
+</body>
+</html>
