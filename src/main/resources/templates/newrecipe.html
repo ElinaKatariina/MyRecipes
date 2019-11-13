@@ -4,7 +4,7 @@
 <title>My Recipes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="css/recipeform.css" th:href="@{css/recipeform.css}" />
+<link type="text/css" rel="stylesheet" href="css/recipes.css" th:href="@{css/recipes.css}" />
 </head>
 <body>
 
@@ -16,11 +16,11 @@
 		<h6>Cooking time: <input class="s-input" type="text" th:field=${recipe.time} /></h6>
 		<h6>Ingredients: <input class="l-input" type="text" th:field=${recipe.ingredients} /></h6>
 		<h6>Guide: <input class="l2-input" type="text" th:field=${recipe.guide} /></h6>
-		<h6>Category: </h6>
-			<select id="categoryId" th:field="*{category}" class="form-control">
+		<h6>Category: </h6><select id="categoryId" th:field="*{category}" class="option-input">
 				<option th:each="category: ${categories}" th:value="${category.categoryId}" th:text="${category.categoryName}" ></option>
 			</select>
-		<input class="btn" type="submit" value="Submit" /><input class="btn" type="reset" value="Reset" /><button class="btn" ><a href="/recipes" class="btnback">Back to recipes</a></button>
+			<br/>
+		<input class="btn imput" type="submit" value="Submit" /><input class="btn imput2" type="reset" value="Reset" /><button class="btn imput2" ><a href="/recipes" class="btnback">Back to recipes</a></button>
 	</form>
 	
 	

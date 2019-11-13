@@ -4,7 +4,7 @@
 <title>My Recipes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link type="text/css" rel="stylesheet" href="../css/recipe.css" th:href="@{../css/recipe.css}" />
+<link type="text/css" rel="stylesheet" href="../css/recipes.css" th:href="@{../css/recipes.css}" />
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 	
 	<h3 class="name" th:text="${recipe.foodTitle}"></h3>
 
-	<table class="table table-striped">
+	<table class="recipetable">
 		
 		<tr>
 			<td class="data1" th:text="${recipe.time}"></td>

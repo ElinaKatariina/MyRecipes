@@ -18,7 +18,7 @@
 	border-radius: 10px;
 	background-color: white;
 	padding: 5px 17px;
-	opacity: 90%;
+	opacity: 75%;
 }
 .link:hover {
 	color: white;
@@ -40,7 +40,6 @@
 	background-color: #ff4d4d;
 }
 table {
-	margin-left: ;
 	column-width: 600px;	
 }
 .hometable {
@@ -50,6 +49,13 @@ table {
 	height: 80px;
 	font-family: garamond;
 	font-size: 40px;
+}
+.recipetable {
+	margin-left: 430px;
+}
+tr {
+	height: 150px;
+	margin: 5px solid white;
 }
 td {
 	height: 50px;
@@ -69,6 +75,13 @@ td {
 	font-family: garamond;
 	font-size: 30px;
 	text-align: center;
+}
+.data3 {
+	margin-left: 30px;
+	width: 600px;
+	font-family: garamond;
+	font-size: 35px;
+	text-align: center justify;
 }
 .cate {
 	margin-left: 300px;
@@ -125,10 +138,64 @@ td {
 	color: white;
 	background-color: #b3ffb3;
 }
+.s-input {
+	width: 187px;
+	height: 17px;
+	text-align: center;
+	margin-left: 10px;
+}
+.s2-input {
+	width: 187px;
+	height: 17px;
+	text-align: center;
+	margin-left: 15px;
+}
+.l-input {
+	width: 300px;
+	height: 40px;
+	text-align: center;
+	margin-left: 30px;
+}
+.l2-input {
+	width: 300px;
+	height: 40px;
+	text-align: center;
+	margin-left: 80px;
+}
+select {
+	font-family: garamond;
+	font-size: 20px;
+	margin-left: 220px;
+	width: 187px;
+	height: 35px;
+}
+.option-input {
+	margin-top: -30px;
+	margin-bottom: 20px;
+}
+.newform {
+	margin-left: 450px;
+}
+h6 {
+	font-family: garamond;
+	margin-left: 70px;
+	font-size: 22px;
+	height: 20px;
+}
 p {
 	font-family: garamond;
 	font-size: 20px;
-	
+}
+.name {
+	text-align: center;
+	font-family: garamond;
+	font-size: 50px;
+}
+.imput {
+	margin-left: 70px;
+}
+.imput2 {
+	margin-left: 20px;
 }
 h1 {
 	font-family: Snell Roundhand;
@@ -137,7 +204,7 @@ h1 {
 }
 body {
 	background-image: url("https://i.pinimg.com/originals/da/1e/0c/da1e0cf802e2971d11af610c6cf9f080.jpg");
-	background-position: center;
-	background-repeat: no-repeat, repeat;
   	background-color: #ffffff;
+  	height: 100%;
+  	width: 100%;
 }
